@@ -1,0 +1,21 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div class="pagebuilder-content-type pagebuilder-slide"
+     attr="data.main.attributes"
+     css="data.main.css"
+     event="{ mouseover: onMouseOver, mouseout: onMouseOut }">
+    <render args="getOptions().template"></render>
+    <div class="custom-slide-wrapper">
+        <div class="pagebuilder-empty-container empty-placeholder"
+             css="placeholderCss()"
+             translate="'Drag text content types here'"></div>
+        <div afterRender="afterRender">
+            <render args="childTemplate"> </render>
+        </div>
+    </div>
+</div>

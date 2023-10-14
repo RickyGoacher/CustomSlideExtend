@@ -1,0 +1,49 @@
+//
+//  Slide: Override the DEFAULT appearance styles here.
+//  Source: Magento/PageBuilder/view/adminhtml/web/css/source/content-type/slide/_default.less
+//  ___________________________________________________________________
+
+.custom-slide-wrapper {
+    min-height: 300px;
+    .pagebuilder-empty-container.empty-placeholder.empty-placeholder-background.visible ~ .pagebuilder-content-type-container-readmore {
+        min-height: 300px;
+        .element-children.content-type-container {
+            height: 300px;
+        }
+    }
+
+    .pagebuilder-empty-container.empty-placeholder.empty-placeholder-background:not(.visible) ~ .pagebuilder-content-type-container-readmore {
+        padding: 1rem;
+    }
+
+    [data-bind="afterRender: afterRender"] {
+        min-height: 300px;
+    }
+
+    .element-children.content-type-container.slide-container {
+        min-height: 300px;
+    }
+
+}
+
+.pagebuilder-content-type.children-min-height.pagebuilder-row {
+    > .element-children {
+        min-height: inherit;
+        padding: 0;
+    }
+}
+
+.pagebuilder-row.type-container {
+    border-style: none;
+    min-height: inherit;
+    transition: min-height .3s ease-in-out;
+
+    &.empty-container {
+        min-height: 300px;
+    }
+}
+
+.pagebuilder-content-type-hidden .pagebuilder-content-type.pagebuilder-row:before {
+    opacity: 1;
+    visibility: visible;
+}
